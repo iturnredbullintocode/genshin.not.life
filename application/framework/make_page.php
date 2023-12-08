@@ -66,7 +66,7 @@ function make_page($content=[
 <head>
 
 <!-- ✎ basic head attributes  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title><?php echo $title; ?></title>
 
