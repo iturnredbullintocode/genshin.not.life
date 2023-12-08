@@ -1,24 +1,9 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/framework/make_page.php'; ?>
-
-
-
-
-
-
-
-<!-- I can theoretically call a page like this -->
-<?php  /* make_page(['content_directory' => '/home.php'] */ ?>
-
-
-
-
-
-
-
-
-<!-- or if I want to just write some html with a PHP wrapper, and still keep the HTML syntax, I can do this -->
-
-<?php make_page(['content' => function(){ ?> 
+<?php 
+include $_SERVER['DOCUMENT_ROOT'].'/framework/make_page.php';
+make_page([
+    'title' => 'Test Home',
+    'content_html' => function(){ 
+?> 
 
 
 
