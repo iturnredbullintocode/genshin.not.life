@@ -31,10 +31,16 @@ function make_page($content=[
         foreach($content['additional_scripts'] as $additional_script)
             $scripts=$scripts.'<script type="text/javascript" src="'.$additional_script.'"></script>';
 
+    
     $styles='<link rel="stylesheet" href="'.$base_url.'/styles/general.css">';
     if (isset($content['additional_styles']))
         foreach($content['additional_styles'] as $additional_style)
             $styles=$styles.'<link rel="stylesheet" href="'.$additional_style.'">';
+    // append a randomized background style
+    $randomized_background='furina_yao_chill';
+    if (rand(0,1)==0)
+        $randomized_background='furina_yao_play';
+    $styles=$styles.'<link rel="stylesheet" href="'.$base_url.'/styles/background_'.$randomized_background.'.css">';
 
     $title="not life.";
     if (isset($content['title'])) 
@@ -88,6 +94,8 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 echo '<link type="text/css" href="http://www.endgame.pk/styles/mobile.css" rel="stylesheet" media="all" />';
 **/
 ?>
+
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Delius|NTR|Quicksand:400,500,700|Material+Icons" rel="stylesheet">
 
 
 

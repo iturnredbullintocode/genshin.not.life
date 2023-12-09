@@ -1,0 +1,4 @@
+body { 
+    background-image: url('/img/background_furina_yao_chill_color2.png'), url('/img/background_solid_2b333e.png');
+    background-repeat: no-repeat, repeat;
+    background-position: right bottom, left top;    }
