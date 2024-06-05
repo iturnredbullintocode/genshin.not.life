@@ -1,0 +1,304 @@
+
+
+
+
+/**
+
+default behavior is 5 equally spaced cells:
+
+<div class="expandy_row">
+    <div onclick="expand_next(this);">
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+    </div>
+    <div style="display: none;">
+        <h1>company info:</h1>
+        stuff and things: <a href="">example.com</a><br>
+        test<br>
+    </div>
+</div>
+
+
+
+**/
+
+
+
+
+/********* default layout. 5 equally spaced cells ****************************************/
+
+.expandy_row {
+    /* perimeter */
+    border: 0px solid #ffffff;
+    padding: 0px;
+    margin: 0px 1px 0px 1px;
+    /* arrangement */
+    display: block;
+    width: 100%; /* fallback */
+    width: calc(100% - 2px);
+    min-width: 100%; /* fallback */
+    min-width: calc(100% - 2px);
+    max-width: 100%; /* fallback */
+    max-width: calc(100% - 2px);
+    /* interior */
+    word-break: break-word;
+    /* font */
+    /* applying a default font to the expandy row. */
+    /* have consciously chosen to apply it to expandy row, not to body. */
+    /* body, sub element 1, subsub element 1a, sub element 2 may want different fonts, */
+    /* so thats how it will be structured */
+    font-family: "main";
+    font-size: 14px;
+    letter-spacing: .3px;
+    line-height: 20px;
+    color: #446372;
+    -webkit-text-stroke: 0.2px #34464e;    }
+.expandy_row > div:first-child {
+    /* perimeter */
+    border: 0px solid #ffffff;
+    padding: 0px;
+    margin: 0px;
+    /* arrangement */
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    display: table;
+    table-layout: fixed;
+    /* interior */
+    overflow: hidden;
+    word-break: break-word;    }
+.expandy_row > div:first-child > div {
+    /* perimeter */
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    padding: 2px 5px 2px 5px;
+    margin: 0px;
+    /* arrangement */
+    display:table-cell;
+    width: 20%;
+    min-width: 20%;
+    max-width: 20%;    }
+.expandy_row > div:last-child {
+    /* perimeter */
+    border-radius: 3px;
+    border: 0px solid #000000;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    /* arrangement */
+    /* purposefully not specifying width to take advantage of display: block */
+    /* width: 100%; */
+    /* min-width: 100%; */
+    /* max-width: 100%; */
+    display: block;   }
+
+
+/* behaviour of content inside an expandy_row */
+.expandy_row a {
+    /* arrangement */
+    display: inline-block;
+    /* font */
+    line-break: anywhere;
+    color: #749edd;
+    -webkit-text-stroke: 0.2px #749edd; 
+    text-decoration: none;    }
+.expandy_row a:visited {
+    /* font */
+    color: #749edd;
+    -webkit-text-stroke: 0.2px #749edd;     }
+.expandy_row a:hover {
+    /* font */
+    color: #6184bb;
+    -webkit-text-stroke: 0.2px #6184bb;     }
+
+
+/* behaviour of content inside an expandy_row */
+.expandy_row h1 {
+    /* perimeter */
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    /* arrangement */
+    display: block; /* so that you dont need a breakline after every damn element */
+    /* font */
+    font-size: 14px;
+    -webkit-text-stroke: 0.5px #294958;
+    color: #294958;
+    font-weight: normal;
+    letter-spacing: .4px;    }
+
+
+
+/* indicators/classification */
+.expandy_row.indicator_different_no > div:first-child > div,
+.expandy_row.indicator_different_no > div:last-child {
+    background-color: #fa9ed1;    }
+.expandy_row.indicator_solid_no > div:first-child > div,
+.expandy_row.indicator_solid_no > div:last-child {
+    background-color: #ff8777;    }
+.expandy_row.indicator_medium_no > div:first-child > div,
+.expandy_row.indicator_medium_no > div:last-child {
+    background-color: #faa99e;    }
+.expandy_row.indicator_light_no > div:first-child > div,
+.expandy_row.indicator_light_no > div:last-child {
+    background-color: #ffd0ca;    }
+.expandy_row.indicator_solid_progress > div:first-child > div,
+.expandy_row.indicator_solid_progress > div:last-child {
+    background-color: #b8d864;    }
+.expandy_row.indicator_light_cool > div:first-child > div,
+.expandy_row.indicator_light_cool > div:last-child {
+    background-color: #d9ebf0;    }
+.expandy_row.indicator_medium_cool > div:first-child > div,
+.expandy_row.indicator_medium_cool > div:last-child {
+    background-color: #aed5ff;    }
+.expandy_row.indicator_light_stalled > div:first-child > div,
+.expandy_row.indicator_light_stalled > div:last-child {
+    background-color: #feff96;    }
+.expandy_row.indicator_medium_stalled > div:first-child > div,
+.expandy_row.indicator_medium_stalled > div:last-child {
+    background-color: #e9dd75;    }
+
+
+
+/********* alternative layout. 2 short cells, 1 wide cell *******************************/
+
+/**
+
+<div class="expandy_row wide_last">
+    <div onclick="expand_next(this);">
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+    </div>
+    <div style="display: none;">
+        <h1>company info:</h1>
+        stuff and things: <a href="">example.com</a><br>
+        test<br>
+    </div>
+</div>
+
+**/
+
+.expandy_row.wide_last > div:first-child > div:last-child {
+    /* arrangement */
+    display:table-cell;
+    width: 60%;
+    min-width: 60%; 
+    max-width: 60%;   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.guild_member {
+    width: calc(100% - 20px);
+    margin-left: 4px;
+    margin-top: 0px;   }
+.guild_member > div {
+    display: table; 
+    border-collapse: separate;
+    border-spacing: 6px;
+    margin-bottom: -7px;
+    width: 100%;  }
+.guild_member > div > div {
+    display: table-cell;
+    /* white-space: nowrap; */
+    overflow: hidden;
+
+    border-collapse: collapse;
+    border-spacing: 0 30px;
+
+    background: #467469;
+    padding: 4px 7px 5px 6px;
+    margin: 14px 10px 10px 10px;
+    border-radius: 7px;
+    border: 1px solid #79a896;
+
+    color: #79a896;
+    font-size: 14px;
+    font-family: "main";
+    letter-spacing: .3px;
+    line-height: 20px;
+}
+
+.guild_member > div:last-child {
+    display: block; 
+
+    background: #467469;
+    padding: 4px 7px 5px 6px;
+    margin: 7px 6px 0px 6px;
+    border-radius: 7px;
+    border: 1px solid #79a896;
+
+    color: #79a896;
+    font-size: 14px;
+    font-family: "main";
+    letter-spacing: .3px;
+    line-height: 20px;   }
+
+
+
+.guild_member > div > div:first-child {
+    width: 120px;
+    max-width: 120px;
+    white-space: nowrap;    }
+.guild_member > div > div:nth-child(2) {
+    width: 200px;
+    max-width: 200px;
+    white-space: nowrap;    }
+.guild_member > div > div:nth-child(3) {
+    width: 200px;
+    max-width: 200px;
+    white-space: nowrap;    }
+.guild_member > div > div:nth-child(4) {
+    width: 30px;
+    max-width: 30px;
+    white-space: nowrap;    }
+.guild_member > div > div:nth-child(5) {
+    width: 60px;
+    max-width: 60px;
+    white-space: nowrap;    }
+.guild_member > div > div:nth-child(6) {
+    width: 100px;
+    max-width: 100px; 
+    white-space: nowrap;   }
+.guild_member > div > div:nth-child(7) {
+    /*width: 100%;*/ }
+
+
+
+
+
+
+
+
+.guild_member.header {
+    margin-top: 10px;    }
+.guild_member.header > div:first-child > div,
+.guild_member.header > div:last-child {
+    background: none;
+    border: 0px solid #79a896;
+    padding-bottom: 0px;    }
+.guild_member.header > div:last-child {
+    margin: 0px;    }
+
+
+
+

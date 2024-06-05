@@ -10,8 +10,8 @@ function make_page($content=[
 {
    
     $base_url='https://not.life';
-    if ($_SERVER['DOCUMENT_ROOT']=='/home1/not12693/genshin')
-        $base_url='https://genshin.not.life';
+    if ($_SERVER['DOCUMENT_ROOT']=='/home1/not12693/nightcrows')
+        $base_url='https://nightcrows.not.life';
 
     // The following are all various parameters that can be passed to make_page().
     // You can add any parameters you want, using arrays like this allows them to be optional.
@@ -35,18 +35,18 @@ function make_page($content=[
     $styles='<link rel="stylesheet" href="'.$base_url.'/styles/general.css">';
     if (isset($content['additional_styles']))
         foreach($content['additional_styles'] as $additional_style)
-            $styles=$styles.'<link rel="stylesheet" href="'.$additional_style.'">';
+            $styles=$styles.'<link rel="stylesheet" href="'.$base_url.'/styles/'.$additional_style.'.css">';
     // append a randomized background style
-    $randomized_background='furina_yao_chill';
+    $randomized_background='guild_medium';
     if (rand(0,1)==0)
-        $randomized_background='furina_yao_play';
+        $randomized_background='guild_medium';
     $styles=$styles.'<link rel="stylesheet" href="'.$base_url.'/styles/background_'.$randomized_background.'.css">';
 
     $title="not life.";
     if (isset($content['title'])) 
         $title=$content['title'];
 
-    $preview_url="http://genshin.not.life/";
+    $preview_url="http://nightcrows.not.life/";
     if (isset($content['preview_url']))
         $preview_url=$content['preview_url'];
 
@@ -54,11 +54,11 @@ function make_page($content=[
     if (isset($content['preview_title']))
         $preview_title=$content['preview_title'];
 
-    $preview_img="http://genshin.not.life/icon/fb_preview_placeholder.jpg";
+    $preview_img="http://nightcrows.not.life/icon/fb_preview_placeholder.jpg";
     if (isset($content['preview_img']))
         $preview_img=$content['preview_img'];
 
-    $preview_description="A list of all ingame achievements and details on how to get them. Team builds & world quest chains prerequisite diagrams coming soon!";
+    $preview_description="A list of all ingame achievements and details on how to get them. Boss and ingame mechanic calculators coming soon!";
     if (isset($content['preview_description']))
         $preview_description=$content['preview_description'];
 

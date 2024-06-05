@@ -1,10 +1,11 @@
 Sometimes I worry that the applications I code are too portable but
 I decided to make this public for now. May private later.
 
-Most genshin database apps lack a human component,
-(the notable exception being the genshin map! love you guys) so I'm aiming to fill that space.
-Moreover, many genshin guide websites nowadays are AI-generated and I aim to provide
-a more human hand in that area as well.
+Purpose of this app is to provide an interesting source of news for the NA/EU players of Night Crows,
+and to unite them into one community. The website is meant mostly for english speakers,
+seeing as the english-speaking community in Night Crows is a minority and we need to rally together.
+Other than news, this website will provide a few guides, tools, and calculators.
+We may also develop a better version of the current discord bot that people use for guilds.
 
 
 Current Objectives
@@ -35,5 +36,4 @@ and I don't get to actually do that for large corporations, so this is my corner
 I also code python apps, it has lovely syntax.
 PHP was my first web app language and I'm fond of how 2000s-core it is.
 
-🍑 I do play genshin, right now I'm building a Pyro Freminet self-melt team with c6 Bennett,
-Furina, and Shenhe.
+🍑 I do play Night Crows, I'm on server Rook 102 and my ign is Creamed.

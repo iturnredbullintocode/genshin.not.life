@@ -2,7 +2,48 @@ html {
     min-height: 100%;    }
 
 body { 
-    /*width: 100vw;
-    min-height: 100vh;*/
     margin: 0px;
     padding: 0px;    }
+
+
+
+
+
+@font-face{
+    font-family:"main";
+    src:url("/fonts/main.ttf") format("truetype");   }
+
+
+.words {
+
+
+
+    display: block;
+
+    font-size: 14px;
+    font-family: "main";
+    letter-spacing: .3px;
+    color: #79a896;
+    line-height: 20px;
+
+
+    padding: 2px 14px 12px 6px;
+    margin: 10px 10px 10px 10px;     }
+
+
+
+
+.test_green {
+    background: #467469;
+    padding: 10px 14px 12px 12px;
+    margin: 14px 10px 10px 10px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #79a896;
+
+    color: #79a896;
+    font-size: 14px;
+    font-family: "main";
+    letter-spacing: .3px;
+    line-height: 20px;
+}

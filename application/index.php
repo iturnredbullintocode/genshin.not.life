@@ -8,14 +8,14 @@ make_page([
 
 
 
+<div class="test_green">
 
 
-<div class="words">
     Hello.<br>
     <br>
     Currently,<br>
-    this is a sandbox / fun testing area for a certain developer.<br>
-    You may contact the developer by email: anna@micromana.ge<br>
+    The developer of this site is working on an app for Night Crows.<br>
+    You can contact us on the union discord https://discord.gg/vHNjgEVzpg<br>
     <br>
 
     <div class="smaller">
@@ -23,7 +23,17 @@ make_page([
         (cat pictures are acceptable)<br>
     </div>
 
+    
+
+
 </div>
+
+
+
+    <div class="words">
+    This website is ran by Creamed, leader of the Penetration Union on server Rook 102.<br>
+    </div>
+
 
 
 
@@ -51,10 +61,6 @@ instead of ads, do partnerships and sell my own products/merch
 
 
 
-
-
-<br>
-owned by resident crackhead Cryo Dehya<br>
 
 
 
